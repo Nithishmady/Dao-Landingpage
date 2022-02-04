@@ -98,7 +98,7 @@ const usestyles = makeStyles((theme)=>({
         textDecoration:"none !important",
         color:"#6D6D6D !important",
         paddingLeft:"2rem",
-        fontWeight:'600',
+        fontWeight:'400',
         
 
         [theme.breakpoints.between('sm','md')]:{

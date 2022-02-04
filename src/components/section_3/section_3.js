@@ -217,7 +217,7 @@ const usestyles = makeStyles((theme)=>({
 }));
 
 
-const Section_3 = () => {
+const LearningPage = () => {
 
     const classes = usestyles()
 
@@ -268,4 +268,4 @@ const Section_3 = () => {
   )
 };
 
-export default Section_3;
+export default LearningPage;
