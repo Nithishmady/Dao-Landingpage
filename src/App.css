@@ -1,3 +1,8 @@
+p{
+  font-weight: 700;
+  line-height: 27px!important;
+  color: #6D6D6D;
+}
 .App {
   text-align: center;
 }
@@ -6,7 +11,9 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+#DAOWORDS{
+  font-weight: bold;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
