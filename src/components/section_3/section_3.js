@@ -4,10 +4,10 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import { Image } from 'react-bootstrap';
 import Button from '@mui/material/Button';
-import Class from '../../assets/images/section-3/class.svg'
-import Discuss from "../../assets/images/section-3/discuss.svg"
-import Subject from "../../assets/images/section-3/subjects.svg"
-import Task from "../../assets/images/section-3/task.svg"
+import Class from '../images/section-3/class.svg'
+import Discuss from "../images/section-3/discuss.svg"
+import Subject from "../images/section-3/subjects.svg"
+import Task from    "../images/section-3/task.svg"
 
 const usestyles = makeStyles((theme)=>({
     root:{

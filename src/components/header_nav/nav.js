@@ -99,10 +99,12 @@ const usestyles = makeStyles((theme)=>({
         color:"#6D6D6D !important",
         paddingLeft:"2rem",
         fontWeight:'400',
-        
+        fontSize:'16px',
 
         [theme.breakpoints.between('sm','md')]:{
-            paddingLeft:"1rem"
+            paddingLeft:"1rem",
+            fontSize:'13px',
+
         },
     },
     right_content:{
@@ -116,10 +118,10 @@ const usestyles = makeStyles((theme)=>({
         textTransform: 'capitalize!important',
         height:"45px",
             width:"110px",
-        [theme.breakpoints.between('xs','lg')]:{
-            height:"25px",
+        [theme.breakpoints.between('sm','lg')]:{
+            height:"35px",
             width:"80px",
-            fontSize:"10px !important",
+            fontSize:"13px !important",
             marginTop:"0rem"
         },
     },
@@ -140,10 +142,10 @@ const usestyles = makeStyles((theme)=>({
         textTransform: 'capitalize!important',
         height:"45px",
             width:"110px",
-        [theme.breakpoints.between('xs','lg')]:{
-            height:"25px",
+        [theme.breakpoints.between('sm','lg')]:{
+            height:"35px",
             width:"80px",
-            fontSize:"10px !important",
+            fontSize:"13px !important",
             marginRight:"0.5rem !important",
             marginTop:"0rem"
         },
@@ -154,7 +156,10 @@ const usestyles = makeStyles((theme)=>({
             display:"flex",
           
         }
-    }
+    },
+    Logo:{
+       width:213,
+    },
 
 
 }))
@@ -170,7 +175,7 @@ const HeaderComponent = () => {
         <Box fixed className={classes.navSection}>
             <Box className={classes.row}>
                 <Box className={classes.heading}>
-                    <Image src={Logo}/>
+                    <Image src={Logo} className={classes.Logo}/>
                 </Box>
                 <Box className={classes.center_content}>
                    <Link className={classes.center_text} style={{paddingLeft:'0px'}} href="#">Home</Link>

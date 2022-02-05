@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@mui/styles";
 import { Container } from "@mui/material";
 import Box from "@mui/material/Box";
-import WholeImage from '../../assets/images/section-1/Wholeimg.svg'
+import WholeImage from '../images/section-1/Wholeimg.svg'
 import Image from 'react-bootstrap/Image'
 const useStyles = makeStyles((theme) => ({
   Root:{
@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
       flexDirection:'column',
       paddingLeft:16,
       paddingRight:16,
-      
     }
     },
     LeftContent:{
@@ -50,12 +49,14 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     fontSize: 56,
     width:'80%',
+    fontStyle:'italic',
+    fontWeight:'bold',
     [theme.breakpoints.down('md')]:{
-      fontSize: 42,
+      fontSize: 38,
       width:'100%',
     },
     [theme.breakpoints.down('sm')]:{
-      fontSize: 37,
+      fontSize: 33,
       marginTop:'0px',
       marginBottom:'50px!important'
     }
@@ -86,8 +87,8 @@ export const Main_content = () => {
       <Box  className={classes.Wrapper_content}>
         <Box className={classes.LeftContent}>
           <h1 className={classes.Boldwords}>
-            <em>Control anything with your</em>{" "} 
-            <span className={classes.Daowords} id='DAOWORDS'>DAO.</span>
+            Control anything with your 
+            <span className={classes.Daowords} id='DAOWORDS'>&nbsp;DAO.</span>
           </h1>
         </Box>
         <Box className={classes.RightContent}>

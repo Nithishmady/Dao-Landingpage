@@ -1,9 +1,9 @@
 
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/material";
-import Arrow from "../../assets/images/section-2/Arrow.svg";
-import Writtingpad from "../../assets/images/section-2/Writtingpad.svg";
-import Mic from "../../assets/images/section-2/Mic.svg";
+import Arrow from "../images/section-2/Arrow.svg";
+import Writtingpad from "../images/section-2/Writtingpad.svg";
+import Mic from "../images/section-2/Mic.svg";
 const useStyles=makeStyles((theme)=>({
     main:{
     display:'flex',
@@ -29,11 +29,20 @@ const useStyles=makeStyles((theme)=>({
          },
          discription:{
              margin:0,
+             marginTop:7,
              width:'70%',
+             fontSize:18,
              [theme.breakpoints.down('md')]:{
-                width:'80%',  
-               
+                width:'85%',  
+                fontSize:14,
+                marginTop:4,
              }
+         },
+         Title:{
+         fontWeight:'bold',
+         [theme.breakpoints.down('md')]:{
+            fontSize:20,
+         }
          },
          ThreeImages:{
           marginLeft:'15px'
@@ -72,7 +81,7 @@ return(
             <Box className={classes.ThreeBoxs} style={{marginTop:items.marginTop}} >
        <img src={items.heading.image} className={classes.ThreeImages}/>
       <Box className={classes.BoxContent}>
-            <h3>{items.heading.title}</h3>
+            <h3 className={classes.Title}>{items.heading.title}</h3>
             <p  className={classes.discription}> {items.heading.discription}</p>
      </Box>
     </Box>

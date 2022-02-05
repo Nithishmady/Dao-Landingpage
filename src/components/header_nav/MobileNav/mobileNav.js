@@ -10,7 +10,11 @@ import Logo from '../MobileNav/Logo.svg'
 import { Image } from 'react-bootstrap';
 
 const useStyles = makeStyles(theme => ({
-
+    Logo:{
+        [theme.breakpoints.down("sm")]: {
+            width:200
+        }
+    },
     navBox:{
         display:"flex",
         flex:1,
@@ -19,8 +23,7 @@ const useStyles = makeStyles(theme => ({
         flexDirection:"column",
         position:"fixed",
         background:"white",
-        zIndex:1,
-        
+        zIndex:1, 
     },
     navbar:{
       display:"flex",
@@ -32,13 +35,17 @@ const useStyles = makeStyles(theme => ({
       backgroundColor:"#EFF2F7",
       flexDirection:'row',
       alignItems:'center',
-      paddingTop:20
+      paddingTop:10,
+      paddingRight:0
     },
     contentBox:{
         display:"flex",
         position:"relative",
         height:"50vh !important",
         background:"linear-gradient(180deg, #7073BE 0%, #2F2E41 100%)",
+        [theme.breakpoints.down("xs")]: {
+            height:"59vh !important",
+        }
     },
     activeNav:{
         height:400
@@ -77,7 +84,7 @@ const useStyles = makeStyles(theme => ({
         marginLeft:"1rem !important",
         backgroundColor:"white",
         textTransform: 'capitalize!important',
-        width:'140px',
+        width:'130px',
         height:'45px',
         borderRadius:"2px!important",
         fontSize:17
@@ -86,7 +93,7 @@ const useStyles = makeStyles(theme => ({
         color:"white !important",
         backgroundColor:"#7073BE !important",
         textTransform: 'capitalize!important',
-        width:'140px',
+        width:'130px',
         height:'45px',
         borderRadius:"2px!important",
         fontSize:17
@@ -121,7 +128,7 @@ export default function MobileNav({children}) {
              <Box component="div" className={classes.navbar}>
              <Box component="div">
                   <Box component="p" className={classes.heading}>
-                  <Image src={Logo} width={230} style={{marginLeft:15}}/>
+                  <Image src={Logo} width={230} style={{marginLeft:15}} className={classes.Logo}/>
                       </Box>
               </Box>
               <Box component="div">

@@ -1,17 +1,17 @@
 import { makeStyles } from '@mui/styles';
 import { Container,Box } from '@mui/material';
 import { useState } from 'react';
-import Wifi from "../../assets/images/section-2/wifiCircle.svg";
+import Wifi from "../images/section-2/wifiCircle.svg";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import SouthIcon from "@mui/icons-material/South";
-import Facebook from "../../assets/images/section-2/Facebook icon.svg";
-import Linkedin from "../../assets/images/section-2/linkedin icon.svg";
-import Twitter from "../../assets/images/section-2/Twitter icon.svg";
-import Mountain from "../../assets/images/section-2/Rectangle 57.svg";
-import rectangleboxs from "../../assets/images/section-2/rectangleBox.svg";
+import Facebook from "../images/section-2/Facebook icon.svg";
+import Linkedin from "../images/section-2/linkedin icon.svg";
+import Twitter from "../images/section-2/Twitter icon.svg";
+import Mountain from "../images/section-2/Rectangle 57.svg";
+import rectangleboxs from "../images/section-2/rectangleBox.svg";
 import Image from 'react-bootstrap/Image'
-import Intersect from '../../assets/images/section-2/Intersect.svg'
+import Intersect from '../images/section-2/Intersect.svg'
 const useStyles=makeStyles((theme)=>({
     FirstBox: {
         width: 235,
@@ -42,35 +42,47 @@ const useStyles=makeStyles((theme)=>({
       },
       Arrowline: {
         display: "flex",
-        alignItems: "center",
+       marginTop:10,
         justifyContent: "center",
         flexDirection: "row",
         [theme.breakpoints.down('xs')]:{
           alignItems: "flex-start",
+          marginTop:0,
         }
       },
     
       SouthIcon: {
         color: "white",
-        height: "42px!important",
+        height: "47px!important",
         width: "50px!important",
         padding: 5,
         paddingTop: 10,
         [theme.breakpoints.down('md')]:{
-          height: "25px!important",
-        width: "33px!important",
-        padding: 10,
-        paddingTop: 14,
+          height: "42px!important",
+        width: "40px!important",
+        padding: 5,
+        paddingTop: 5,
        },
-       [theme.breakpoints.down('xs')]:{
-        height: "25px!important",
-        width: "23px!important",
-        padding: 10,
-        paddingTop: 10,
+       [theme.breakpoints.down('sm')]:{
+        height: "45px!important",
+        width: "40px!important",
+        padding: 5,
+        paddingTop: 1,
+      },
+      [theme.breakpoints.down('xs')]:{
+        height: "30px!important",
+        width: "30px!important",
+        padding: 4,
+        paddingTop: 0,
       }
       },
       NorthIcon:{
         color: "#53D955",
+        [theme.breakpoints.down('xs')]:{
+          height: "23px!important",
+          width: "17px!important",
+         
+        }
       },
       SecondBox: {
         display: "flex",
@@ -107,19 +119,23 @@ const useStyles=makeStyles((theme)=>({
         background: "#FB3F6C",
         borderRadius: "20px",
         marginTop: '15px',
+        padding:6,
         [theme.breakpoints.down('md')]:{
           width: 50,
         height: 50,
        },
        [theme.breakpoints.down('xs')]:{
-        width: 43,
-        height: 43,
+        width: 40,
+        height: 40,
         borderRadius: "15px",
       }
       },
       Incomebox: {
         paddingLeft: 20,
         lineHeight: 0.3,
+        [theme.breakpoints.down('xs')]:{
+          paddingLeft: 10,
+        }
       },
       ThirdBox: {
         width: 288,
@@ -179,6 +195,10 @@ const useStyles=makeStyles((theme)=>({
          }
       },
       UserCount:{
+        fontWeight:'bold',
+        marginTop:15,
+        marginBottom:15,
+        fontSize:38,
         [theme.breakpoints.down('md')]:{
          fontSize:24
        },
@@ -192,7 +212,13 @@ const useStyles=makeStyles((theme)=>({
          width:27
         }
       },
+      // Incomebox:{
+          
+      // },
       Income:{
+        marginTop:15,
+        marginBottom:5,
+        
         [theme.breakpoints.down('md')]:{
           fontSize:13
          },
@@ -202,11 +228,12 @@ const useStyles=makeStyles((theme)=>({
         }
       },
       Dollers:{
+        fontWeight:'bold',
         [theme.breakpoints.down('md')]:{
           fontSize:16
          },
-         [theme.breakpoints.down('xs')]:{
-          marginTop:8
+         [theme.breakpoints.down('sm')]:{
+          marginTop:2
         }
       },
       Mountain:{
@@ -259,7 +286,7 @@ return(
     <>
     <Box className={classes.FirstBox}>
       <Image src={Wifi} width={44} className={classes.Wifi} />
-      <h1 className={classes.UserCount}>23.8K</h1>
+      <h2 className={classes.UserCount}>23.8K</h2>
       <p style={{ margin: 0 }} className={classes.reach}>Reach</p>
       <Box className={classes.Arrowline}>
         <NorthEastIcon  className={classes.NorthIcon}  />
@@ -272,7 +299,7 @@ return(
       </Box>
       <Box className={classes.Incomebox}>
         <p className={classes.Income}>income</p>
-        <h3 className={classes.Dollers}>$10000</h3>
+        <h5 className={classes.Dollers}>$10000</h5>
       </Box>
     </Box>
     <Box className={classes.ThirdBox}>
